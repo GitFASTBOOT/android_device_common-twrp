@@ -20,3 +20,5 @@ include device/android/common/kernel/mkbootimg.mk
 # prebuilt
 include device/android/common/kernel/prebuilt.mk
 
+# cmdline
+include device/android/common/kernel/cmdline.mk
