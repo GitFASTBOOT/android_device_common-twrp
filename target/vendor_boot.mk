@@ -1,5 +1,5 @@
 # A/B
-AB_OTA_UPDATER := true
+ifeq ($(AB_OTA_UPDATER),true)
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
@@ -13,6 +13,7 @@ AB_OTA_PARTITIONS += \
     vendor_dlkm \
     vbmeta_system \
     vbmeta_vendor
+endif
 
 # Vendor Modules
 TW_LOAD_VENDOR_MODULES := true

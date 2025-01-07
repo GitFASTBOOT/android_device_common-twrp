@@ -1,5 +1,5 @@
 # A/B
-AB_OTA_UPDATER := true
+ifeq ($(AB_OTA_UPDATER),true)
 AB_OTA_PARTITIONS += \
     vbmeta \
     vbmeta_system \
@@ -9,6 +9,7 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vendor \
     product
+endif
 
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
