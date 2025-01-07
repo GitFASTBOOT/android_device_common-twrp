@@ -20,5 +20,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Virtual A/B
+ifeq ($(ENABLE_VIRTUAL_AB),true)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+endif
+
+# vendor_boot
+ifeq ($(BOARD_BOOT_HEADER_VERSION),4)
+  $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+endif
+
 # dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
