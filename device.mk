@@ -42,9 +42,8 @@ endif
 # dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-
-ifeq ($(ENABLE_VIRTUAL_AB),true)
 # A/B
+ifeq ($(ENABLE_VIRTUAL_AB),true)
 PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
@@ -64,3 +63,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_vendor=true
 endif
 
+# Mtk plpath utils
+ifeq ($(BOARD_USES_MTK_HARDWARE),true)
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils \
+    mtk_plpath_utils.recovery
+endif
