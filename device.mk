@@ -26,6 +26,9 @@ $(call inherit-product-if-exists, vendor/twrp/config/common.mk)
 # Inherit some common pb stuff.
 $(call inherit-product-if-exists, vendor/pb/config/common.mk)
 
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Virtual A/B
 ifeq ($(ENABLE_VIRTUAL_AB),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
