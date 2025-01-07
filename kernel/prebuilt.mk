@@ -1,0 +1,19 @@
+# prebuilt dtb
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+
+# prebuilt kernel
+ifeq ($(BOARD_BOOTIMG_HEADER_VERSION),2)
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+endif
+
+ifeq ($(BOARD_BOOTIMG_HEADER_VERSION),4)
+# Arch
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+
+# No Kernel
+TARGET_NO_KERNEL := true
+BOARD_RAMDISK_USE_LZ4 := true
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
+endif
