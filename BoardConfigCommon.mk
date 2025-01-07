@@ -55,6 +55,11 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
+# samsung
+ifeq ($(BOARD_VENDOR),samsung)
+include device/android/common/samsung/samsung.mk
+endif
+
 # kernel
 include device/android/common/kernel/kernel.mk
 
