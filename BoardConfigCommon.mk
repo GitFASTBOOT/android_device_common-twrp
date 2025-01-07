@@ -55,3 +55,5 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
+## Inherit partitions flags
+include device/android/common/partitions.mk
