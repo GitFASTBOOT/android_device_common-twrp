@@ -55,6 +55,9 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
+# kernel
+include device/android/common/kernel/kernel.mk
+
 # boot
 ifeq ($(BOARD_STORE_RAMDISK_IN_BOOT),true)
 include device/android/common/target/boot.mk
