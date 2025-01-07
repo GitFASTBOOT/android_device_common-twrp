@@ -57,3 +57,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 ## Inherit partitions flags
 include device/android/common/partitions.mk
+
+# Twrp flags
+include device/android/common/TW_flags.mk
