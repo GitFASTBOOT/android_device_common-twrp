@@ -1,5 +1,6 @@
 # A/B
-ifeq ($(AB_OTA_UPDATER),true)
+ifeq ($(ENABLE_VIRTUAL_AB),true)
+AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
