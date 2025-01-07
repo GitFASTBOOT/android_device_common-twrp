@@ -20,6 +20,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit some common twrp stuff.
+$(call inherit-product-if-exists, vendor/twrp/config/common.mk)
+
+# Inherit some common pb stuff.
+$(call inherit-product-if-exists, vendor/pb/config/common.mk)
+
 # Virtual A/B
 ifeq ($(ENABLE_VIRTUAL_AB),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
