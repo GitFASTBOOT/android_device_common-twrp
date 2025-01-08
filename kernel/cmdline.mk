@@ -28,7 +28,7 @@ endif
 endif
 
 # header 4
-ifeq ($(BOARD_BOOTIMG_HEADER_VERSION),4)
+ifeq ($(BOARD_BOOT_HEADER_VERSION),4)
 
 # mediatek
 ifeq ($(BOARD_USES_MTK_HARDWARE),true)
