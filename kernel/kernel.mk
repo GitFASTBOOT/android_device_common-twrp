@@ -1,4 +1,6 @@
 # kernel
+BOARD_KERNEL_IMAGE_NAME := Image
+
 ifeq ($(BOARD_BOOT_HEADER_VERSION),4)
 # Arch
 TARGET_KERNEL_ARCH := arm64
