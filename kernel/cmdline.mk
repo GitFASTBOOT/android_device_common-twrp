@@ -8,7 +8,7 @@ endif
 
 # qcom
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-BOARD_KERNEL_CMDLINE += \
+BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200n8 \
     androidboot.hardware=qcom \
     androidboot.console=ttyMSM0 \
@@ -37,7 +37,7 @@ endif
 
 # qcom
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-BOARD_VENDOR_CMDLINE += \
+BOARD_VENDOR_CMDLINE := \
     console=ttyMSM0,115200n8 \
     androidboot.hardware=qcom \
     androidboot.console=ttyMSM0 \
