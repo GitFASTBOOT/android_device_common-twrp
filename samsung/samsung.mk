@@ -1,3 +1,7 @@
+# dtbo
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+BOARD_INCLUDE_RECOVERY_DTBO := true
+
 # samsung partitions
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
